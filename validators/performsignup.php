@@ -18,6 +18,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $quer = "SELECT id FROM users WHERE username = '$username' AND password = '$password'";
     $result = $conn->query($quer);
 
+    if(strlen($password) <8)
+    {
+        echo "Password must be at least 8 characters long.";
+        exit();
+    }
+
     if($result->num_rows > 0)
     {
         echo "Username already exists. Please try again.";
@@ -33,7 +39,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     session_start();
     if(@!isset($_SESSION['id'])){
-    $_SESSION["id"] = $result->fetch_assoc()['id'];
+        $_SESSION["id"] = $result->fetch_assoc()['id'];
     }
     echo "success";
 }
