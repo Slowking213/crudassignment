@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['id'] == 42069) {
     ?>
     <div class="profile-container">
                 <div class="add-book">
-                    <h2>Add a Book</h2>
+                    <h2>Edit Book</h2>
 
                     <form action="operators/editbook.php" method = "post">
                     <label for="ISBN">ISBN:</label>
@@ -36,9 +36,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['id'] == 42069) {
 
                     <input type="hidden" name="id" value="<?php echo $ISBN ?>">
                     
-                    <form action = "admin.php" method="POST">
-                    <button type ="submit" class="add-button">Edit Book</button>
-                    </form>
+
+                    <div style = "display: flex; flex-direction: row; justify-content : space-between">
+                        <form action = "admin.php" method="POST">
+                        <button type ="submit" class="add-button">Edit Book</button>
+                        </form>
+
+                        <form action = "admin.php" method="POST">
+                        <button type ="submit" class="delete-btnn">Cancel</button>
+                        </form>
+                    </div>
                 </div>
             </div>
     <?php

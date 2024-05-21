@@ -22,9 +22,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['id'] == 42069) {
                         <label for="new_email">New Email:</label>
                         <input type="email" id="new_email" name="new_email" value="<?php echo htmlspecialchars($email); ?>" required><br>
                         
-                        <form action = "admin.php" method="POST">
-                        <button onclick="updateprofile(<?php echo $id ?>,false)" type="submit" class="update-button">Update Profile</button>
-                        </form>
+                        <div style = "display: flex; flex-direction: row; justify-content : space-between">
+                            <form action = "admin.php" method="POST">
+                            <button onclick="updateprofile(<?php echo $id ?>,false)" type="submit" class="update-button">Update Profile</button>
+                            </form>
+                            <form action = "admin.php" method="POST">
+                            <button  type ="submit" class="delete-btnn">Cancel</button>
+                            </form>
+                        </div>
                 </div>
 
             </div>
