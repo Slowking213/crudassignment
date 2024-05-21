@@ -222,7 +222,7 @@ function deleteuser(element,id)
         {
             if(response == "success")
             {
-                
+                location.reload();
             }else
             {
                 alert(response);

@@ -6,7 +6,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && $_SESSION['id'] == 42069) {
     ?>
     <div class="profile-container">
         <div class="edit-profile">
-                        <h2>Edit Profile</h2>
+                        <h2>Create Profile</h2>
                             <label for="username">Username:</label>
                             <input type="text" id="username" name="username" required><br>
                             

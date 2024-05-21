@@ -28,11 +28,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $conn->query($sql);
 
+    $quer = "SELECT id FROM users WHERE username = '$username' AND password = '$password'";
+    $result = $conn->query($quer);
 
-    if(!isset($_POST['admin']))
-    {
-        session_start();
-        $_SESSION["id"] = $result->fetch_assoc()['id'];
+    session_start();
+    if(@!isset($_SESSION['id'])){
+    $_SESSION["id"] = $result->fetch_assoc()['id'];
     }
     echo "success";
 }
