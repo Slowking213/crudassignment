@@ -49,6 +49,10 @@ function signup(toadmin=false)
                     {
                         alert(response);
                     }
+                    else
+                    {
+                        location.reload();
+                    }
                 }
             });
         },
@@ -117,7 +121,13 @@ function addbook(id="")
     var genre = document.getElementById("genre").value;
     var isbn = document.getElementById("ISBN").value;
     var year = document.getElementById("year").value;
+    var owner = "";
+    try{
     var owner = document.getElementById("owner").value;
+    }catch(e)
+    {
+        
+    }
     if(owner == "")
     {
         owner = id;

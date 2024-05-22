@@ -10,7 +10,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Socials</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="https://matias.me/nsfw/">Contact</a></li>
             </ul>
         </div>
     </div>
